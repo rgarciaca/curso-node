@@ -1,0 +1,6 @@
+{
+    "editor.tokenColorCustomizations": null,
+    "jshint.options": {
+        "esversion": 6
+    }
+}
