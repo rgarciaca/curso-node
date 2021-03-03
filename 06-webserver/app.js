@@ -42,10 +42,10 @@ app.get('/elements', (req, res) => {
 // app.get('/elements', (req, res) => {
 //     res.sendFile(__dirname + '/public/elements.html');
 // });
-
-app.get('*', (req, res) => {
-    res.sendFile(__dirname + '/public/404.html');
-});
+//
+// app.get('*', (req, res) => {
+//     res.sendFile(__dirname + '/public/404.html');
+// });
 
 app.listen(port, () => {
     console.log(`La aplicación esta escuchando en http://localhost:${ port }`);
