@@ -2,5 +2,9 @@
     "editor.tokenColorCustomizations": null,
     "jshint.options": {
         "esversion": 6
-    }
+    },
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ]
 }
