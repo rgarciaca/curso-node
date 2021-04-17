@@ -1,4 +1,4 @@
-const Usuario = require('../models/usuario');
+const { Usuario, Categoria, Producto } = require('../models');
 const Role = require('../models/role');
 
 const esRolValido = async(rol = '') => {
@@ -23,8 +23,24 @@ const existeUsuarioPorId = async(id) => {
     }
 };
 
+const existeCategoria = async(id) => {
+    const existeCategoriaDB = await Categoria.findById(id);
+    if (!existeCategoriaDB) {
+        throw new Error(`El id no existe: ${ id }.`);
+    }
+};
+
+const existeProducto = async(id) => {
+    const existeProductoDB = await Producto.findById(id);
+    if (!existeProductoDB) {
+        throw new Error(`El id no existe: ${ id }.`);
+    }
+};
+
 module.exports = {
     esRolValido,
     emailEnBD,
-    existeUsuarioPorId
+    existeUsuarioPorId,
+    existeCategoria,
+    existeProducto
 };
